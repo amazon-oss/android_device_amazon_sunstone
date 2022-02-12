@@ -129,7 +129,8 @@ PRODUCT_PACKAGES += \
     FrameworksResOverlaySunstone \
     MssiFrameworkOverlay \
     MssiNetworkStackOverlay \
-    MssiWifiOverlay
+    MssiWifiOverlay \
+    SystemUIOverlaySunstone
 
 # Permissions
 PRODUCT_COPY_FILES += \
