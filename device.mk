@@ -23,7 +23,8 @@ PRODUCT_PACKAGES += \
 
 # Rootdir
 PRODUCT_PACKAGES += \
-    fstab.emmc
+    fstab.emmc \
+    fstab.emmc.vendor_ramdisk
 
 # Shipping API level
 PRODUCT_SHIPPING_API_LEVEL := 30
