@@ -20,6 +20,11 @@ TARGET_SCREEN_WIDTH := 1200
 PRODUCT_BUILD_SUPER_PARTITION := false
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
+# GMS
+ifeq ($(WITH_GMS),true)
+GMS_MAKEFILE=gms_minimal.mk
+endif
+
 # Health
 PRODUCT_PACKAGES += \
     android.hardware.health-service.mediatek \
