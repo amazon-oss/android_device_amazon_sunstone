@@ -127,6 +127,7 @@ PRODUCT_ENFORCE_RRO_TARGETS := *
 
 PRODUCT_PACKAGES += \
     FrameworksResOverlaySunstone \
+    Launcher3OverlaySunstone \
     LineageSettingsOverlaySunstone \
     MssiFrameworkOverlay \
     MssiNetworkStackOverlay \
