@@ -129,6 +129,7 @@ PRODUCT_PACKAGES += \
     FrameworksResOverlaySunstone \
     Launcher3OverlaySunstone \
     LineageSettingsOverlaySunstone \
+    LineageSettingsProviderOverlaySunstone \
     MssiFrameworkOverlay \
     MssiNetworkStackOverlay \
     MssiWifiOverlay \
