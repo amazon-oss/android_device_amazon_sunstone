@@ -26,6 +26,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.light-service.lineage
 
+# Memtrack
+PRODUCT_PACKAGES += \
+    android.hardware.memtrack-service.mediatek
+
 # Overlay
 PRODUCT_ENFORCE_RRO_TARGETS := *
 
