@@ -42,6 +42,9 @@ BOARD_MKBOOTIMG_ARGS += --tags_offset $(BOARD_KERNEL_TAGS_OFFSET)
 TARGET_BOOTLOADER_BOARD_NAME := sunstone
 TARGET_NO_BOOTLOADER := true
 
+# HIDL
+DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/manifest.xml
+
 # Kernel
 BOARD_DTB_CFG := $(DEVICE_PATH)/kernel/dtb.cfg
 BOARD_DTBO_CFG := $(DEVICE_PATH)/kernel/dtbo.cfg
