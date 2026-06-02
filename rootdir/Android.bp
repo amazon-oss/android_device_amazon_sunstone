@@ -9,3 +9,10 @@ prebuilt_etc {
     vendor: true,
     vendor_ramdisk_available: true,
 }
+
+prebuilt_etc {
+    name: "ueventd.mt8188.rc",
+    filename: "ueventd.rc",
+    src: "etc/ueventd.mt8188.rc",
+    vendor: true,
+}

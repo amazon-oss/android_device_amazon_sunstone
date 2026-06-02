@@ -1,0 +1,388 @@
+#change partition permission
+# eMMC only
+/dev/block/mmcblk0                               0660    root    system
+/dev/block/mmcblk0boot0                          0660    root    system
+/dev/block/mmcblk0boot1                          0660    root    system
+/dev/misc-sd                                     0660    root    system
+
+# UFS only
+/dev/block/sda                                   0660    root    system
+/dev/block/sdb                                   0660    root    system
+/dev/block/sdc                                   0660    root    system
+
+# eMMC/UFS common
+/dev/block/platform/bootdevice/by-name/misc2     0660    root    system
+/dev/block/platform/bootdevice/by-name/boot      0640    root    system
+/dev/block/platform/bootdevice/by-name/recovery  0640    root    system
+/dev/block/platform/bootdevice/by-name/secro     0640    root    system
+/dev/block/platform/bootdevice/by-name/seccfg    0660    root    system
+/dev/block/platform/bootdevice/by-name/proinfo   0660    root    system
+/dev/block/platform/bootdevice/by-name/nvram     0660    root    system
+/dev/block/platform/bootdevice/by-name/para      0660    root    system
+/dev/block/platform/bootdevice/by-name/logo      0660    root    system
+/dev/block/platform/bootdevice/by-name/frp       0660    root    system
+/dev/block/platform/bootdevice/by-name/md1img    0640    root    system
+/dev/block/platform/bootdevice/by-name/md1img_a  0640    root    system
+/dev/block/platform/bootdevice/by-name/md1img_b  0640    root    system
+/dev/block/platform/bootdevice/by-name/md1dsp    0660    root    system
+/dev/block/platform/bootdevice/by-name/boot_para 0640    root    system
+
+/dev/block/platform/11230000.mmc/by-name/misc2     0660    root    system
+/dev/block/platform/11230000.mmc/by-name/boot      0640    root    system
+/dev/block/platform/11230000.mmc/by-name/recovery  0640    root    system
+/dev/block/platform/11230000.mmc/by-name/secro     0640    root    system
+/dev/block/platform/11230000.mmc/by-name/seccfg    0660    root    system
+/dev/block/platform/11230000.mmc/by-name/proinfo   0660    root    system
+/dev/block/platform/11230000.mmc/by-name/nvram     0660    root    system
+/dev/block/platform/11230000.mmc/by-name/para      0660    root    system
+/dev/block/platform/11230000.mmc/by-name/logo      0660    root    system
+/dev/block/platform/11230000.mmc/by-name/frp       0660    root    system
+/dev/block/platform/11230000.mmc/by-name/md1img    0640    root    system
+/dev/block/platform/11230000.mmc/by-name/md1img_a  0640    root    system
+/dev/block/platform/11230000.mmc/by-name/md1img_b  0640    root    system
+/dev/block/platform/11230000.mmc/by-name/md1dsp    0660    root    system
+/dev/block/platform/11230000.mmc/by-name/boot_para 0640    root    system
+
+# OTP
+/dev/otp                  0660   system     system
+/dev/block/platform/bootdevice/by-name/otp       0660    root    system
+/dev/block/platform/11230000.mmc/by-name/otp       0660    root    system
+
+# Connectivity
+/dev/stpwmt               0660   system     system
+/dev/wmtdetect            0660   system     system
+/dev/fw_log_wmt           0660   system     system
+/dev/conninfra_dev        0660   system     system
+
+# BT
+/dev/connsys_bt           0660    bluetooth    bluetooth
+
+# GPS
+/dev/gpsdl0               0660   gps        gps
+/dev/gpsdl1               0660   gps        gps
+/dev/stpgps               0660   gps        gps
+/dev/gps                  0660   gps        system
+/dev/gps_emi              0660   gps        gps
+
+# ANT
+/dev/stpant               0660   system     system
+
+# WIFI
+/dev/connsys_wifi         0660   wifi     wifi
+
+# FMRadio
+/dev/fm                   0660   media     media
+
+# NFC
+/dev/st21nfc              0660   nfc        radio
+/dev/st54spi              0660   secure_element        secure_element
+
+# MTK BTIF driver
+/dev/btif                 0600   system     system
+
+# Trusty driver
+/dev/trusty-ipc-dev0      0660   system     system
+/dev/nebula-ipc-dev0      0660   system     system
+
+# RPMB
+/dev/block/mmcblk0rpmb    0660   root       system
+/dev/mmcblk0rpmb          0660   root       system
+
+# TrustonicTEE driver
+/dev/mobicore             0600   system     system
+/dev/mobicore-user        0666   system     system
+/dev/t-base-tui           0666   system     system
+
+#v4l2 device
+/dev/video*      0666 system camera
+/dev/media*      0660 camera system
+/dev/v4l-subdev* 0660 camera system
+
+#v4l2 codec
+/dev/vcu    0660 system media
+
+#v4l2 camera
+/dev/mtk_hcp     0660 camera system
+
+# DRM node
+/dev/dri/card0            0660   system     system
+
+# MDDP node
+/dev/mddp                 0660   system     system
+
+# CMDQ
+/dev/mtk_mdp 0640 system media
+
+# MDP SYNC
+/dev/mdp_sync 0640 system media
+
+# add the read write right of ttyUSB*
+/dev/bus/usb/*     	  0660   root       usb
+/dev/ttyUSB0              0660   radio      radio
+/dev/ttyUSB1              0660   radio      radio
+/dev/ttyUSB2              0660   radio      radio
+/dev/ttyUSB3              0660   radio      radio
+/dev/ttyUSB4              0660   radio      radio
+
+# Anyone can read the logs, but if they're not in the "logs"
+# group, then they'll only see log entries for their UID.
+/dev/log/ksystem          0600   root       log
+
+/dev/ccci*                0660   radio      radio
+/dev/ttyC*                0660   radio      radio
+/sys/kernel/ccci          modem_info   0644   radio       radio
+/sys/kernel/ccci          md1_postfix  0644   radio       radio
+/sys/kernel/ccci          md2_postfix  0644   radio       radio
+/dev/eemcs*               0660   radio      radio
+/dev/emd*                 0660   radio      radio
+/dev/ccci_pcm_rx          0660   audio      audio
+/dev/ccci_pcm_tx          0660   audio      audio
+/dev/ccci_aud             0660   audio      audio
+/dev/ccci2_aud            0660   audio      audio
+/dev/ccci3_aud            0660   audio      audio
+/dev/ccci_raw_audio            0660   audio      audio
+/dev/ccci3_raw_audio            0660   audio      audio
+/dev/eemcs_aud            0660   audio      audio
+/dev/irtx                 0660   system     system
+/dev/ir-learning          0660   system     system
+# SGX device node
+/dev/pvrsrvkm             0666   root       root
+/dev/pvr_sync             0666   root       root
+
+
+/sys/devices/platform/leds-mt65xx/leds/green   delay_on      0664  system   system
+/sys/devices/platform/leds-mt65xx/leds/green   delay_off      0664  system   system
+/sys/devices/platform/leds-mt65xx/leds/red   delay_on      0664  system   system
+/sys/devices/platform/leds-mt65xx/leds/red   delay_off      0664  system   system
+/sys/devices/platform/leds-mt65xx/leds/blue   delay_on      0664  system   system
+/sys/devices/platform/leds-mt65xx/leds/blue   delay_off      0664  system   system
+
+#GPIO
+/dev/mtgpio               0600   radio      root
+
+# Camera
+/dev/camera_eeprom*       0660   system     camera
+
+#FOR VIA MODEM
+/dev/ttySDIO*             0660   radio      sdcard_rw
+/dev/ttyRB*               0660   radio      radio
+
+# Mali node
+/dev/mali0                 0666   system     graphics
+
+# Change ION driver permission
+/dev/ion                  0666   system     graphics
+
+# MTK DMA_HEAP
+/dev/mtk_svp              0440   system     system
+
+#touch
+/dev/touch                0660   root       system
+/dev/hotknot              0660   root       system
+
+#hang_detect
+/dev/RT_Monitor           0660   system     system
+/dev/kick_powerkey        0660   system     system
+
+#MTK In-House TEE
+/dev/ttyACM0              0660   radio      radio
+
+# OPTEE
+/dev/tee0                 0660   system     drmrpc
+/dev/teepriv0             0660   system     drmrpc
+
+# add for GKI, from init.rc
+/data/vendor/AFObitTrue	0771	root	system
+/data/vendor/camera_dump	0771	root	system
+/data/vendor/dipdebug	0771	root	system
+/data/vendor/flash	0771	root	system
+/data/vendor/flicker	0771	root	system
+/data/vendor/ndd	0771	root	system
+/data/vendor/pdo	0771	root	system
+/data/vendor/shading	0771	root	system
+/data/vendor/shading_otp	0771	root	system
+/dev/adsp	0660	root	media
+/dev/adsp_0	0440	system	media
+/dev/adsp_1	0440	system	media
+/dev/alarm	0660	root	system
+/dev/ancservice	0640	media	media
+/dev/apusys	0660	system	camera
+/dev/audio_ipi	0640	media	media
+/dev/audio_scp	0640	media	media
+/dev/CAM_CAL_DRV	0660	system	camera
+/dev/camera-dip	0660	system	camera
+/dev/camera-dpe	0660	system	camera
+/dev/camera-fdvt	0660	system	camera
+/dev/camera-isp	0660	system	camera
+/dev/camera-mfb	0660	system	camera
+/dev/camera-owe	0660	system	camera
+/dev/camera-pipemgr	0660	system	camera
+/dev/camera-rsc	0660	system	camera
+/dev/camera-sysram	0660	system	camera
+/dev/camera-tsf	0660	system	camera
+/dev/ccu	0660	system	camera
+/dev/ccu_rproc	0660	system	camera
+/dev/cec0	0666	media	system
+/dev/cpuctl	0664	system	system
+/dev/cpuctl/background	0664	system	system
+/dev/cpuctl/background/tasks	0664	system	system
+/dev/cpuctl/foreground	0664	system	system
+/dev/cpuctl/foreground/tasks	0664	system	system
+/dev/cpuctl/performance	0664	system	system
+/dev/cpuctl/performance/tasks	0664	system	system
+/dev/cpuctl/rt	0664	system	system
+/dev/cpuctl/rt/tasks	0664	system	system
+/dev/cpuctl/tasks	0664	system	system
+/dev/cpuctl/top-app	0664	system	system
+/dev/cpuctl/top-app/tasks	0664	system	system
+/dev/devmap	0440	root	system
+/dev/ebc	0660	media	media
+/dev/flashlight	0660	system	camera
+/dev/FM50AF	0660	system	camera
+/dev/graphics/fb0	0660	system	graphics
+/dev/gz_kree	0660	system	camera
+/dev/hdmirx	0664	media	system
+/dev/hdmitx	0664	media	system
+/dev/hid-keyboard	0660	bluetooth	bluetooth
+/dev/kd_camera_hw	0660	system	camera
+/dev/kd_camera_hw_bus2	0660	system	camera
+/dev/MAIN2AF	0660	system	camera
+/dev/MAIN3AF	0660	system	camera
+/dev/MAINAF	0660	system	camera
+/dev/MATV	0660	system	media
+/dev/mcupm	0440	root	system
+/dev/MJC	0660	media	system
+/dev/mt_otg_test	0660	root	radio
+/dev/mtk_dfrc	0660	system	graphics
+/dev/mtk_disp_mgr	0660	system	graphics
+/dev/mtk_mm	0660	system	camera
+/dev/mtk_mm-uncached	0660	system	camera
+/dev/mtk_rrc	0660	media	system
+/dev/mtk_sched	0660	system	media
+/dev/MTK_SMI	0660	media	media
+/dev/mtk_stc	0660	system	media
+/dev/mtkfb_vsync	0660	system	graphics
+/dev/mt-mdp	0660	system	media
+/dev/offloadservice	0640	media	media
+/dev/scp	0440	root	system
+/dev/sec	0660	root	system
+/dev/seninf	0660	system	camera
+/dev/spm	0660	system	system
+/dev/sspm	0440	root	system
+/dev/stune/io/tasks	0666	system	system
+/dev/SUBAF	0660	system	camera
+/dev/sw_sync	0660	system	graphics
+/dev/ttyGS0	0660	system	radio
+/dev/ttyGS1	0660	system	radio
+/dev/ttyGS3	0660	system	radio
+/dev/uibc	0660	system	media
+/dev/usip	0660	media	media
+/dev/video0	0660	media	system
+/dev/video1	0660	media	system
+/dev/vow	0640	media	media
+/dev/vpp-wpe-a	0660	system	camera
+/dev/vpp-wpe-b	0660	system	camera
+/dev/vpu	0660	system	camera
+/mnt/vendor/cct	0771	root	system
+/mnt/vendor/nvcfg	0771	system	system
+/mnt/vendor/nvdata	0771	root	system
+/mnt/vendor/protect_f	0770	system	system
+/mnt/vendor/protect_s	0770	system	system
+/mtd@bootimg	0640	root	system
+/mtd@misc	0660	root	system
+/mtd@nvram	0660	root	system
+/mtd@preloader	0640	root	system
+/mtd@pro_info	0660	root	system
+/mtd@recovery	0640	root	system
+/mtd@sec_ro	0640	root	system
+/mtd@seccfg	0660	root	system
+/proc/bootprof	0664	system	system
+/proc/clkmgr/pll_fsel	0664	radio	system
+/proc/clkmgr/pll_test	0664	radio	system
+/proc/cpu_loading/onoff	0664	system	system
+/proc/cpu_loading/overThrhld	0664	system	system
+/proc/cpu_loading/poltime_nsecs	0664	system	system
+/proc/cpu_loading/poltime_secs	0664	system	system
+/proc/cpu_loading/uevent_enable	0664	system	system
+/proc/cpu_ss/cpu_ss_debug_mode	0664	root	radio
+/proc/cpu_ss/cpu_ss_mode	0664	root	radio
+/proc/cpu_ss/cpu_ss_period	0664	root	radio
+/proc/cpu_ss/cpu_ss_period_mode	0660	root	radio
+/proc/cpufreq/cpufreq_limited_by_hevc	0660	system	system
+/proc/cpufreq/cpufreq_limited_max_freq_by_user	0660	system	system
+/proc/cpufreq/cpufreq_power_mode	0660	system	system
+/proc/cpufreq/enable_hw_gov	0660	system	system
+/proc/driver/otp	0660	root	system
+/proc/fliperfs/cg_enable	0664	system	system
+/proc/fliperfs/cg_threshold	0664	system	system
+/proc/fliperfs/cg_threshold_ddr3	0664	system	system
+/proc/fliperfs/perf	0664	system	system
+/proc/hps/down_threshold	0660	system	system
+/proc/hps/down_times	0660	system	system
+/proc/hps/heavy_task_enabled	0660	system	system
+/proc/hps/num_base_perf_serv	0640	system	system
+/proc/hps/num_limit_power_serv	0660	system	system
+/proc/hps/num_limit_ultra_power_saving	0660	system	system
+/proc/hps/power_mode	0660	system	system
+/proc/hps/rush_boost_enabled	0660	system	system
+/proc/hps/up_threshold	0660	system	system
+/proc/hps/up_times	0660	system	system
+/proc/lk_env	0660	root	system
+/proc/m4u	0640	system	media
+/proc/net/vlan/config	0640	root	radio
+/proc/perfmgr/eas_ioctl	0660	system	system
+/proc/ppm/dump_cluster_0_dvfs_table	0440	system	system
+/proc/ppm/dump_cluster_1_dvfs_table	0440	system	system
+/proc/ppm/dump_cluster_2_dvfs_table	0440	system	system
+/proc/ppm/mode	0660	system	system
+/proc/ppm/policy/hica_settings/L_ONLY_to_4L_LL/loading_hold_time	0660	system	system
+/proc/ppm/policy/hica_variant	0660	system	system
+/proc/ppm/policy/perfserv_max_perf_idx	0440	system	system
+/proc/ppm/policy/perfserv_min_perf_idx	0440	system	system
+/proc/ppm/policy/perfserv_perf_idx	0660	system	system
+/proc/ppm/policy/userlimit_cpu_core	0660	system	system
+/proc/ppm/policy/userlimit_cpu_freq	0660	system	system
+/proc/ppm/policy/userlimit_max_cpu_core	0660	system	system
+/proc/ppm/policy/userlimit_max_cpu_freq	0660	system	system
+/proc/ppm/policy/userlimit_min_cpu_core	0660	system	system
+/proc/ppm/policy/userlimit_min_cpu_freq	0660	system	system
+/proc/ppm/root_cluster	0660	system	system
+/sys/bus/platform/drivers/emi_ctrl/concurrency_scenario	0664	media	media
+/sys/class/leds/lcd-backlight/brightness	0664	system	system
+/sys/class/misc/adsp_0/log_enable	0660	root	system
+/sys/class/misc/adsp_1/log_enable	0660	root	system
+/sys/class/misc/mcupm/mcupm_mobile_log	0620	root	system
+/sys/class/misc/scp/scp_ee_force_ke	0664	root	system
+/sys/class/misc/scp/scp_log_flush	0220	root	system
+/sys/class/misc/scp/scp_mobile_log	0660	root	system
+/sys/class/misc/sspm/sspm_mobile_log	0620	root	system
+/sys/devices/platform/mt6311-user/mt6311_access	0664	root	radio
+/sys/devices/platform/mt-pmic/pmic_access	0664	root	radio
+/sys/devices/platform/mt-pmic/pmic_access_bank0	0664	root	radio
+/sys/devices/platform/mt-pmic/pmic_access_bank1	0664	root	radio
+/sys/devices/system/cpu/cpufreq/hotplug/cpu_num_base	0660	system	system
+/sys/devices/system/cpu/cpufreq/policy0/scaling_governor	0660	system	system
+/sys/devices/system/cpu/cpufreq/policy0/schedutil/rate_limit_us	0660	system	system
+/sys/devices/system/cpu/cpufreq/policy4/scaling_governor	0660	system	system
+/sys/devices/system/cpu/cpufreq/policy6/schedutil/rate_limit_us	0660	system	system
+/sys/devices/system/cpu/rq-stats/avg_htasks_thresh	0660	system	system
+/sys/devices/system/cpu/rq-stats/htasks_thresh	0660	system	system
+/sys/power/autosleep	0660	system	system
+/sys/power/dcm_state	0660	system	system
+/sys/power/sb_state	0660	system	system
+/sys/power/state	0660	system	system
+/sys/power/tuxonice	0770	radio	system
+/sys/power/tuxonice/do_hibernate	0220	radio	system
+/sys/power/wake_lock	0660	radio	wakelock
+/sys/power/wake_unlock	0660	radio	wakelock
+/sys/power/wakeup_count	0660	system	system
+/vendor/bin/baseband_regdump	4750	root	diag
+
+# from init.project.rc
+/dev/MAINAF2	0660	system	camera
+/dev/GAF001AF	0660	system	camera
+/dev/DW9714AF	0660	system	camera
+/dev/LC898212AF	0660	system	camera
+/dev/BU64745GWZAF	0660	system	camera
+/dev/mtk_ccd	0660	system	camera
+/proc/smb/ScreenComm	0660	system	system

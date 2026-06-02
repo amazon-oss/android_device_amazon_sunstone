@@ -33,7 +33,8 @@ PRODUCT_PACKAGES += \
 # Rootdir
 PRODUCT_PACKAGES += \
     fstab.emmc \
-    fstab.emmc.vendor_ramdisk
+    fstab.emmc.vendor_ramdisk \
+    ueventd.mt8188.rc
 
 # Shipping API level
 PRODUCT_SHIPPING_API_LEVEL := 30
