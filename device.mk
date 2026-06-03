@@ -30,6 +30,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/tablet_core_hardware.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/tablet_core_hardware.xml
 
+# Properties
+include hardware/mediatek/configs/properties/vendor_logtag.mk
+
 # Recovery
 PRODUCT_PACKAGES += \
     init.recovery.mt8188.rc
