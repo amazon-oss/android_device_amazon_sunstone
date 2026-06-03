@@ -1,2 +1,5 @@
 # Recovery
 ro.minui.blacklist_input_devices=ilitek_hid-over-i2c 222A:FFF1 Stylus
+
+# USB
+vendor.usb.controller=112b1000.usb

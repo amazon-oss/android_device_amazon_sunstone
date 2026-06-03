@@ -1,3 +1,5 @@
+import /vendor/etc/init/hw/init.mt8188.usb.rc
+
 on early-init
     # Kernel modules
     setprop vendor.all.modules.ready 0
