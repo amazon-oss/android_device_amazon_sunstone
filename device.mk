@@ -46,6 +46,9 @@ PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
     hardware/mediatek
 
+# SPL
+VENDOR_SECURITY_PATCH := 2021-08-05
+
 # Verified Boot
 PRODUCT_PACKAGES += \
     android.software.verified_boot.prebuilt.xml
