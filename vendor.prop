@@ -1,3 +1,6 @@
+# Dalvik
+dalvik.vm.dex2oat64.enabled=true
+
 # Recovery
 ro.minui.blacklist_input_devices=ilitek_hid-over-i2c 222A:FFF1 Stylus
 
