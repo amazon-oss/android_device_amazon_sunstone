@@ -50,6 +50,9 @@ PRODUCT_PACKAGES += \
     android.hardware.health-service.mediatek \
     android.hardware.health-service.mediatek-recovery
 
+# ION
+$(call soong_config_set_bool,libion,legacy_impl,true)
+
 # Kernel Modules
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/kernel/modules.load.recovery:$(TARGET_COPY_OUT_RECOVERY)/root/lib/modules/modules.load.recovery

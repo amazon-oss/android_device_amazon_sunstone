@@ -116,6 +116,7 @@ TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.emmc
 TARGET_RECOVERY_PIXEL_FORMAT := BGRA_8888
 
 # SEPolicy
+include device/lineage/sepolicy/libion/sepolicy.mk
 include device/mediatek/sepolicy_vndr/SEPolicy.mk
 
 # Verified Boot
