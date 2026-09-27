@@ -17,6 +17,16 @@ from extract_utils.main import (
     ExtractUtilsModule,
 )
 
+_displayservice_ping = (
+    b'_ZN7lineage10frameworks14displayservice4V1_014IEventCallback4pingEv'
+)
+_displayservice_unresolved = (
+    rb'_ZN7lineage10frameworks14displayservice4V1_01[45]I[A-Za-z0-9_]*'
+    rb'(?:linkToDeath|unlinkToDeath|getDebugInfo|getHashChain|'
+    rb'interfaceChain|interfaceDescriptor|5debug|registerForNotifications)'
+    rb'[A-Za-z0-9_]*'
+)
+
 namespace_imports = [
     'device/amazon/sunstone',
     'hardware/amazon',
@@ -65,6 +75,15 @@ blob_fixups: blob_fixups_user_type = {
         .add_needed('libcrypto_shim.so'),
     'vendor/lib64/hw/hwcomposer.mt8188.so': blob_fixup()
         .sig_replace('00 20 80 52 bc 6d 00 94 f9 03 00 aa', '00 a6 81 52'),
+    'vendor/lib64/libmtkcam_hal_android_app_cbadaptor.so': blob_fixup()
+        .replace_needed('android.frameworks.displayservice@1.0.so',
+                        'lineage.frameworks.displayservice@1.0.so')
+        .binary_regex_replace(
+            b'_ZN7android10frameworks14displayservice',
+            b'_ZN7lineage10frameworks14displayservice')
+        .binary_regex_replace(
+            _displayservice_unresolved,
+            lambda m: _displayservice_ping.ljust(len(m.group(0)), b'\x00')),
 }  # fmt: skip
 
 module = ExtractUtilsModule(

@@ -202,7 +202,6 @@ vendor/etc/audio_param/Volume_ParamUnitDesc.xml
 vendor/firmware/dsp_sunstone.bin
 
 # Camera
-system/apex/com.android.vndk.current/lib64/android.frameworks.displayservice@1.0.so:vendor/lib64/android.frameworks.displayservice@1.0.so
 vendor/bin/hw/camerahalserver
 vendor/etc/init/camerahalserver.rc
 vendor/lib64/hi846_front_mipi_raw_IdxMgr.so
