@@ -61,6 +61,8 @@ blob_fixups: blob_fixups_user_type = {
         .clear_symbol_version('__gnu_Unwind_Find_exidx'),
     ('vendor/lib/libnvram.so', 'vendor/lib64/libnvram.so'): blob_fixup()
         .add_needed('libbase_shim.so'),
+    'vendor/lib/libwvhidl.so': blob_fixup()
+        .add_needed('libcrypto_shim.so'),
     'vendor/lib64/hw/hwcomposer.mt8188.so': blob_fixup()
         .sig_replace('00 20 80 52 bc 6d 00 94 f9 03 00 aa', '00 a6 81 52'),
 }  # fmt: skip
