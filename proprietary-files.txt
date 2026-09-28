@@ -108,6 +108,12 @@ vendor/lib64/libsoft_attestation_cert.so:vendor/lib64/libsoft_attestation_cert-v
 # Modules
 vendor/etc/init.insmod.mt8188.cfg
 
+# NVRAM
+vendor/lib/libcustom_nvram.so
+vendor/lib/libnvram.so
+vendor/lib64/libcustom_nvram.so
+vendor/lib64/libnvram.so
+
 # TEE
 vendor/bin/tee-supplicant
 vendor/etc/init/tee-supplicant.rc
