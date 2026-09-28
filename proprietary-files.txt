@@ -1,5 +1,9 @@
 # Unpinned blobs from Amazon/sunstone/sunstone:11/RS8338.3339N/0030132734720:user/amz-p,release-keys
 
+# Gatekeeper
+vendor/lib/optee_armtz/38ba0cdc-df0e-11e4-9869-233fb6ae4795.ta
+vendor/lib64/hw/gatekeeper.mt8188.so
+
 # Keymaster
 vendor/bin/hw/android.hardware.keymaster@4.0-service.optee
 vendor/etc/init/android.hardware.keymaster@4.0-service.optee.rc
