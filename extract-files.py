@@ -31,6 +31,14 @@ blob_fixups: blob_fixups_user_type = {
         .replace_needed('libkeymaster_portable.so', 'libkeymaster_portable-v30.so')
         .replace_needed('libpuresoftkeymasterdevice.so', 'libpuresoftkeymasterdevice-v30.so')
         .replace_needed('libsoft_attestation_cert.so', 'libsoft_attestation_cert-v30.so'),
+    ('vendor/lib/android.hardware.audio.common-util-v30.so', 'vendor/lib/android.hardware.audio.common@6.0-util-v30.so',
+     'vendor/lib/hw/audio.primary.mt8188.so', 'vendor/lib/hw/fireos.hardware.audio@6.0-impl.so',
+     'vendor/lib/libasp.so', 'vendor/lib/libaudioprimarydevicehalifclient.so', 'vendor/lib/libedgeflow_core.so',
+     'vendor/lib/libtensorflowlite_c-v30.so'): blob_fixup()
+        .replace_needed('android.hardware.audio.common-util.so', 'android.hardware.audio.common-util-v30.so')
+        .replace_needed('android.hardware.audio.common@6.0-util.so', 'android.hardware.audio.common@6.0-util-v30.so')
+        .replace_needed('libmedia_helper.so', 'libmedia_helper-v30.so')
+        .replace_needed('libtensorflowlite_c.so', 'libtensorflowlite_c-v30.so'),
     'vendor/lib/libMtkOmxVdecEx.so': blob_fixup()
         .add_needed('libui_shim.so'),
     ('vendor/lib/libh264enc_sa.ca7.so', 'vendor/lib/libmp4enc_sa.ca7.so', 'vendor/lib/libthha.so',
