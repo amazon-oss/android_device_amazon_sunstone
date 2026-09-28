@@ -121,6 +121,12 @@ vendor/lib/libnvram.so
 vendor/lib64/libcustom_nvram.so
 vendor/lib64/libnvram.so
 
+# Sensors
+vendor/bin/hw/android.hardware.sensors@2.0-service-mediatek
+vendor/lib64/hw/sensors.mt8188.so
+vendor/lib64/libksensor.so
+vendor/lib64/libsensor_custom.so
+
 # TEE
 vendor/bin/tee-supplicant
 vendor/etc/init/tee-supplicant.rc
