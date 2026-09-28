@@ -2,3 +2,11 @@
 
 # Modules
 vendor/etc/init.insmod.mt8188.cfg
+
+# TEE
+vendor/bin/tee-supplicant
+vendor/etc/init/tee-supplicant.rc
+vendor/lib/libteec.so
+vendor/lib/libtz_uree.so
+vendor/lib64/libteec.so
+vendor/lib64/libtz_uree.so
