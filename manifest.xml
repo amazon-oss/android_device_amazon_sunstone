@@ -4,6 +4,16 @@
 -->
 <manifest version="4.0" type="device" target-level="7">
     <hal format="hidl">
+        <name>android.hardware.audio</name>
+        <transport>hwbinder</transport>
+        <fqname>@6.0::IDevicesFactory/default</fqname>
+    </hal>
+    <hal format="hidl">
+        <name>android.hardware.audio.effect</name>
+        <transport>hwbinder</transport>
+        <fqname>@6.0::IEffectsFactory/default</fqname>
+    </hal>
+    <hal format="hidl">
         <name>android.hardware.gatekeeper</name>
         <transport>hwbinder</transport>
         <fqname>@1.0::IGatekeeper/default</fqname>
@@ -38,6 +48,16 @@
         <name>android.hardware.sensors</name>
         <transport>hwbinder</transport>
         <fqname>@2.0::ISensors/default</fqname>
+    </hal>
+    <hal format="hidl">
+        <name>fireos.hardware.audio</name>
+        <transport>hwbinder</transport>
+        <fqname>@6.0::IDevicesFactory/default</fqname>
+    </hal>
+    <hal format="hidl">
+        <name>fireos.hardware.audiosignalprocessor</name>
+        <transport>hwbinder</transport>
+        <fqname>@1.1::IHalAudioSignalProcessor/default</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.mediatek.hardware.mms</name>
