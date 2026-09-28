@@ -14,5 +14,9 @@ PRODUCT_SHIPPING_API_LEVEL := 30
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
 
+# Verified Boot
+PRODUCT_PACKAGES += \
+    android.software.verified_boot.prebuilt.xml
+
 # Inherit the proprietary files
 $(call inherit-product, vendor/amazon/sunstone/sunstone-vendor.mk)
