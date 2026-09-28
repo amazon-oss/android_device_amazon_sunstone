@@ -81,6 +81,10 @@ vendor/lib64/vendor.mediatek.hardware.pq@2.6.so
 # Display (Firmware)
 vendor/firmware/valhall-1691526.wa
 
+# DRVB
+vendor/lib/libmtk_drvb.so
+vendor/lib64/libmtk_drvb.so
+
 # Gatekeeper
 vendor/lib/optee_armtz/38ba0cdc-df0e-11e4-9869-233fb6ae4795.ta
 vendor/lib64/hw/gatekeeper.mt8188.so
