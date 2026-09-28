@@ -50,6 +50,9 @@ TARGET_KERNEL_SOURCE := kernel/amazon/mt8188
 
 # Kernel Modules
 BOARD_RECOVERY_KERNEL_MODULES_LOAD := $(strip $(shell cat $(DEVICE_PATH)/kernel/modules.load.recovery))
+BOARD_VENDOR_KERNEL_MODULES_LOAD := $(strip $(shell cat $(DEVICE_PATH)/kernel/modules.load))
+BOARD_VENDOR_RAMDISK_KERNEL_MODULES_LOAD := $(strip $(shell cat $(DEVICE_PATH)/kernel/modules.load.ramdisk))
+BOOT_KERNEL_MODULES := $(BOARD_VENDOR_RAMDISK_KERNEL_MODULES_LOAD)
 RECOVERY_KERNEL_MODULES := \
     $(BOARD_RECOVERY_KERNEL_MODULES_LOAD) \
     focal_hid.ko \
