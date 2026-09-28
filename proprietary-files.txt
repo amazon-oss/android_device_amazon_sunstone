@@ -1009,3 +1009,18 @@ vendor/lib/libteec.so
 vendor/lib/libtz_uree.so
 vendor/lib64/libteec.so
 vendor/lib64/libtz_uree.so
+
+# Touch
+vendor/firmware/boe_novatek_ts_fw.bin
+vendor/firmware/focaltech_ts_fw_kd.bin
+vendor/firmware/focaltech_ts_fw_tg.bin
+vendor/firmware/focaltech_ts_hid_fw_kd.bin
+vendor/firmware/focaltech_ts_hid_fw_tg.bin
+vendor/firmware/hsd_novatek_ts_fw.bin
+vendor/firmware/ili9882t_ts_fw_kd_boe.bin
+vendor/firmware/ili9882t_ts_fw_tg_hsd.bin
+vendor/firmware/ilitek_hid_kd_boe_fw.bin
+vendor/firmware/ilitek_hid_tg_hsd_fw.bin
+vendor/firmware/inx_novatek_ts_fw.bin
+vendor/firmware/novatek_ts_fw_hid_hsd.bin
+vendor/firmware/novatek_ts_fw_hid_inx.bin
