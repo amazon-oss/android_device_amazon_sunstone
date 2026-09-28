@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+     SPDX-FileCopyrightText: The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<MediaCodecs>
+    <Settings>
+        <Setting name="max-video-encoder-input-buffers" value="10" />
+        <Setting name="supports-multiple-secure-codecs" value="false" />
+    </Settings>
+    <Include href="media_codecs_mediatek_video.xml" />
+</MediaCodecs>

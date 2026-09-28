@@ -16,6 +16,7 @@ from extract_utils.main import (
 namespace_imports = [
     'device/amazon/sunstone',
     'hardware/mediatek',
+    'hardware/mediatek/libmtkperf_client',
 ]
 
 blob_fixups: blob_fixups_user_type = {
