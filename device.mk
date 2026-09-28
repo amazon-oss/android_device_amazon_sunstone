@@ -159,6 +159,7 @@ PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
     hardware/amazon \
     hardware/google/interfaces \
+    hardware/google/pixel/pixelstats \
     hardware/google/pixel/power-libperfmgr \
     hardware/lineage/interfaces/power-libperfmgr \
     hardware/mediatek \
@@ -166,6 +167,13 @@ PRODUCT_SOONG_NAMESPACES += \
 
 # SPL
 VENDOR_SECURITY_PATCH := 2021-08-05
+
+# Thermal
+PRODUCT_PACKAGES += \
+    android.hardware.thermal-service.mediatek
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/thermal_info_config.json:$(TARGET_COPY_OUT_VENDOR)/etc/thermal_info_config.json
 
 # Touch
 PRODUCT_COPY_FILES += \
