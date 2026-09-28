@@ -4,6 +4,9 @@ aaudio.mmap_policy=2
 ro.audio.monitorRotation=true
 ro.audio.usb.period_us=16000
 
+# Bluetooth
+ro.bt.bdaddr_path=/data/vendor/bluetooth/bdaddr
+
 # Camera
 camera.disable_zsl_mode=1
 

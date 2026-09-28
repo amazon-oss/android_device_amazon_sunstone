@@ -18,6 +18,8 @@ $(call inherit-product, frameworks/native/build/phone-xhdpi-4096-dalvik-heap.mk)
 # Audio
 PRODUCT_PACKAGES += \
     android.hardware.audio.effect@6.0-impl:32 \
+    android.hardware.bluetooth.audio-impl:32 \
+    audio.bluetooth.default:32 \
     audio.r_submix.default:32 \
     audio.usb.default:32 \
     fireos.hardware.audio.service
@@ -27,12 +29,21 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_COPY_FILES += \
     frameworks/av/services/audiopolicy/config/audio_policy_volumes.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_volumes.xml \
+    frameworks/av/services/audiopolicy/config/bluetooth_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_audio_policy_configuration.xml \
     frameworks/av/services/audiopolicy/config/default_volume_tables.xml:$(TARGET_COPY_OUT_VENDOR)/etc/default_volume_tables.xml \
     frameworks/av/services/audiopolicy/config/r_submix_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/r_submix_audio_policy_configuration.xml \
     frameworks/av/services/audiopolicy/config/usb_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/usb_audio_policy_configuration.xml
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.audio.low_latency.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.audio.low_latency.xml
+
+# Bluetooth
+PRODUCT_PACKAGES += \
+    android.hardware.bluetooth-service.mediatek
+
+PRODUCT_PACKAGES += \
+    android.hardware.bluetooth_le.prebuilt.xml \
+    android.hardware.bluetooth.prebuilt.xml
 
 # Camera
 PRODUCT_COPY_FILES += \
@@ -141,6 +152,7 @@ PRODUCT_PACKAGES += \
     fstab.emmc \
     fstab.emmc.vendor_ramdisk \
     fstab.enableswap \
+    init.btmac.sh \
     init.insmod.sh \
     init.mt8188.rc \
     ueventd.mt8188.rc

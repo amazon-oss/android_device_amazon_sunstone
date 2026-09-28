@@ -61,6 +61,10 @@ on post-fs-data
     chown system system /mnt/vendor/nvcfg/fg/car_tune_value
     chown system system /mnt/vendor/nvcfg/fg/old_fg_data
 
+    # Bluetooth
+    mkdir /data/vendor/bluetooth 0770 bluetooth bluetooth
+    start vendor.btmac
+
     # Camera
     mkdir /data/vendor/camera_dump 0771 root system
     mkdir /data/vendor/flash 0771 root system
@@ -107,6 +111,9 @@ on post-fs-data
     mkdir /data/vendor/wifi/wpa/sockets 0770 wifi wifi
 
 on boot
+    # Bluetooth
+    exec u:r:vendor_modprobe:s0 -- /vendor/bin/modprobe -d /vendor/lib/modules btmtk_sdio_unify.ko
+
     # Lights
     chown system system /sys/class/leds/lcd-backlight/brightness
     chmod 0664 /sys/class/leds/lcd-backlight/brightness
@@ -195,6 +202,12 @@ on property:vendor.all.modules.ready=1
 service insmod_sh /vendor/bin/init.insmod.sh /vendor/etc/init.insmod.mt8188.cfg
     user root
     group root system
+    disabled
+    oneshot
+
+service vendor.btmac /vendor/bin/init.btmac.sh
+    user bluetooth
+    group bluetooth
     disabled
     oneshot
 

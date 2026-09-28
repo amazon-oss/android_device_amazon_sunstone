@@ -201,6 +201,14 @@ vendor/etc/audio_param/Volume_ParamUnitDesc.xml
 # Audio (Firmware)
 vendor/firmware/dsp_sunstone.bin
 
+# Bluetooth
+vendor/lib64/libbluetooth_mtk.so
+vendor/lib64/libbt-vendor.so
+
+# Bluetooth (Firmware)
+vendor/firmware/BT_RAM_CODE_MT7902_1_1_hdr.bin
+vendor/firmware/bt_mt7902_1_1.cfg
+
 # Camera
 vendor/bin/hw/camerahalserver
 vendor/etc/init/camerahalserver.rc
