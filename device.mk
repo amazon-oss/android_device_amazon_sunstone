@@ -7,6 +7,10 @@
 PRODUCT_BUILD_SUPER_PARTITION := false
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
+# Rootdir
+PRODUCT_PACKAGES += \
+    fstab.emmc
+
 # Shipping API level
 PRODUCT_SHIPPING_API_LEVEL := 30
 
