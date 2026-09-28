@@ -30,6 +30,8 @@ blob_fixups: blob_fixups_user_type = {
         .replace_needed('libkeymaster_portable.so', 'libkeymaster_portable-v30.so')
         .replace_needed('libpuresoftkeymasterdevice.so', 'libpuresoftkeymasterdevice-v30.so')
         .replace_needed('libsoft_attestation_cert.so', 'libsoft_attestation_cert-v30.so'),
+    'vendor/lib/libMtkOmxVdecEx.so': blob_fixup()
+        .add_needed('libui_shim.so'),
     ('vendor/lib/libnvram.so', 'vendor/lib64/libnvram.so'): blob_fixup()
         .add_needed('libbase_shim.so'),
     'vendor/lib64/hw/hwcomposer.mt8188.so': blob_fixup()
