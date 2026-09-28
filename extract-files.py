@@ -5,6 +5,7 @@
 #
 
 from extract_utils.fixups_blob import (
+    blob_fixup,
     blob_fixups_user_type,
 )
 from extract_utils.main import (
@@ -18,6 +19,16 @@ namespace_imports = [
 ]
 
 blob_fixups: blob_fixups_user_type = {
+    ('vendor/bin/hw/android.hardware.keymaster@4.0-service.optee', 'vendor/lib64/libkeymaster4-v30.so',
+     'vendor/lib64/libkeymaster4support-v30.so', 'vendor/lib64/libkeymaster_messages-v30.so',
+     'vendor/lib64/libkeymaster_portable-v30.so', 'vendor/lib64/libpuresoftkeymasterdevice-v30.so',
+     'vendor/lib64/libsoft_attestation_cert-v30.so'): blob_fixup()
+        .replace_needed('libkeymaster4.so', 'libkeymaster4-v30.so')
+        .replace_needed('libkeymaster4support.so', 'libkeymaster4support-v30.so')
+        .replace_needed('libkeymaster_messages.so', 'libkeymaster_messages-v30.so')
+        .replace_needed('libkeymaster_portable.so', 'libkeymaster_portable-v30.so')
+        .replace_needed('libpuresoftkeymasterdevice.so', 'libpuresoftkeymasterdevice-v30.so')
+        .replace_needed('libsoft_attestation_cert.so', 'libsoft_attestation_cert-v30.so'),
 }  # fmt: skip
 
 module = ExtractUtilsModule(
