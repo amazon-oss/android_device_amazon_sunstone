@@ -282,6 +282,16 @@ vendor/lib64/vendor.mediatek.hardware.pq@2.6.so
 # Display (Firmware)
 vendor/firmware/valhall-1691526.wa
 
+# DRM (Widevine)
+vendor/bin/hw/android.hardware.drm@1.3-service.widevine
+vendor/etc/init/android.hardware.drm@1.3-service.widevine.rc
+vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.3-service.widevine.xml
+vendor/lib/libOPteeWidevineDrm.so
+vendor/lib/liboemcrypto.so
+vendor/lib/libwvhidl.so
+vendor/lib/optee_armtz/d96a83b7-050e-44b6-9f61-0c4ec63dacce.ta
+vendor/lib/optee_armtz/edff8ba9-79d6-4ace-a3c8-27dcd51d21ed.ta
+
 # DRVB
 vendor/lib/libmtk_drvb.so
 vendor/lib64/libmtk_drvb.so
