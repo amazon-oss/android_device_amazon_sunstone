@@ -11,6 +11,10 @@ PRODUCT_USE_DYNAMIC_PARTITIONS := true
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/kernel/modules.load.recovery:$(TARGET_COPY_OUT_RECOVERY)/root/lib/modules/modules.load.recovery
 
+# Recovery
+PRODUCT_PACKAGES += \
+    init.recovery.mt8188.rc
+
 # Rootdir
 PRODUCT_PACKAGES += \
     fstab.emmc

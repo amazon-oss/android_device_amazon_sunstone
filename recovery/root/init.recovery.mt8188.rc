@@ -1,0 +1,16 @@
+#
+# SPDX-FileCopyrightText: The LineageOS Project
+# SPDX-License-Identifier: Apache-2.0
+#
+
+on init
+    setprop sys.usb.configfs 1
+    setprop sys.usb.controller "112b1000.usb"
+    setprop vendor.usb.controller "112b1000.usb"
+    write /sys/module/mtk_kpd/parameters/swap_vol_key 1
+
+on post-fs
+    insmod /lib/modules/stylus_battery_algo.ko
+    insmod /lib/modules/i2c-hid-nt36523n.ko
+    insmod /lib/modules/i2c-hid-ilitek.ko
+    insmod /lib/modules/focal_hid.ko
