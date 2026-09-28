@@ -75,6 +75,8 @@ blob_fixups: blob_fixups_user_type = {
         .add_needed('libcrypto_shim.so'),
     'vendor/lib64/hw/hwcomposer.mt8188.so': blob_fixup()
         .sig_replace('00 20 80 52 bc 6d 00 94 f9 03 00 aa', '00 a6 81 52'),
+    ('vendor/lib64/libaalservice.so', 'vendor/lib64/libcam.utils.sensorprovider.so'): blob_fixup()
+        .replace_needed('libsensorndkbridge.so', 'android.hardware.sensors@1.0-convert-shared.so'),
     'vendor/lib64/libmtkcam_hal_android_app_cbadaptor.so': blob_fixup()
         .replace_needed('android.frameworks.displayservice@1.0.so',
                         'lineage.frameworks.displayservice@1.0.so')
