@@ -1,0 +1,4 @@
+# Unpinned blobs from Amazon/sunstone/sunstone:11/RS8338.3339N/0030132734720:user/amz-p,release-keys
+
+# Modules
+vendor/etc/init.insmod.mt8188.cfg

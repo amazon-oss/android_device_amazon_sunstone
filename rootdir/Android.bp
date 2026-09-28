@@ -10,6 +10,19 @@ prebuilt_etc {
     vendor_ramdisk_available: true,
 }
 
+sh_binary {
+    name: "init.insmod.sh",
+    src: "bin/init.insmod.sh",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.mt8188.rc",
+    src: "etc/init.mt8188.rc",
+    sub_dir: "init/hw",
+    vendor: true,
+}
+
 prebuilt_etc {
     name: "ueventd.mt8188.rc",
     filename: "ueventd.rc",
