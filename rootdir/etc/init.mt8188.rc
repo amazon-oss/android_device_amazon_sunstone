@@ -119,6 +119,9 @@ on boot
     # Performance
     write /sys/devices/platform/10012000.dvfsrc/helio-dvfsrc/dvfsrc_req_ddr_opp 0
 
+    # Wi-Fi
+    exec u:r:vendor_modprobe:s0 -- /vendor/bin/modprobe -d /vendor/lib/modules wlan_mt7902_sdio.ko
+
 on property:ro.bootmode=charger && property:vendor.all.modules.ready=1
     # Performance
     write /sys/devices/platform/10012000.dvfsrc/helio-dvfsrc/dvfsrc_req_ddr_opp 0

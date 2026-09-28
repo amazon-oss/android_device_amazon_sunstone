@@ -141,5 +141,14 @@ DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += \
     hardware/mediatek/vintf/mediatek_framework_compatibility_matrix_aidl.xml \
     hardware/mediatek/vintf/mediatek_framework_compatibility_matrix.xml
 
+# Wi-Fi
+BOARD_HOSTAPD_DRIVER := NL80211
+BOARD_WPA_SUPPLICANT_DRIVER := NL80211
+WIFI_DRIVER_STATE_CTRL_PARAM := "/dev/connsys_wifi"
+WIFI_DRIVER_STATE_OFF := "0"
+WIFI_DRIVER_STATE_ON := "1"
+WIFI_HIDL_UNIFIED_SUPPLICANT_SERVICE_RC_ENTRY := true
+WPA_SUPPLICANT_VERSION := VER_0_8_X
+
 # Inherit the proprietary files
 include vendor/amazon/sunstone/BoardConfigVendor.mk

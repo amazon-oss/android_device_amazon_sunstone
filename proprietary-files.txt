@@ -1024,3 +1024,18 @@ vendor/firmware/ilitek_hid_tg_hsd_fw.bin
 vendor/firmware/inx_novatek_ts_fw.bin
 vendor/firmware/novatek_ts_fw_hid_hsd.bin
 vendor/firmware/novatek_ts_fw_hid_inx.bin
+
+# Wi-Fi
+vendor/etc/wifi/p2p_supplicant_overlay.conf
+vendor/etc/wifi/wpa_supplicant.conf
+vendor/etc/wifi/wpa_supplicant_overlay.conf
+vendor/lib64/libwifi-hal.so:vendor/lib64/libwifi-hal-mtk.so;FIX_SONAME
+
+# Wi-Fi (Firmware)
+vendor/firmware/EEPROM_MT7902_1.bin
+vendor/firmware/TxPwrLimit_MT79x1.dat
+vendor/firmware/WIFI_MT7902_patch_mcu_1_1_hdr.bin
+vendor/firmware/WIFI_RAM_CODE_MT7902_1.bin
+vendor/firmware/regulatory.db
+vendor/firmware/regulatory.db.p7s
+vendor/firmware/wifi.cfg

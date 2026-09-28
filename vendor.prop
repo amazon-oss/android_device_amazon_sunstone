@@ -39,3 +39,6 @@ ro.vendor.mtk_op_tee_support=1
 
 # USB
 vendor.usb.controller=112b1000.usb
+
+# Wi-Fi
+ro.vendor.wifi.sap.interface=ap0
