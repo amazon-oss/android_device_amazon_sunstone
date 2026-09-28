@@ -15,6 +15,7 @@ from extract_utils.main import (
 
 namespace_imports = [
     'device/amazon/sunstone',
+    'hardware/amazon',
     'hardware/mediatek',
     'hardware/mediatek/libmtkperf_client',
 ]
