@@ -1,5 +1,15 @@
 # Unpinned blobs from Amazon/sunstone/sunstone:11/RS8338.3339N/0030132734720:user/amz-p,release-keys
 
+# Keymaster
+vendor/bin/hw/android.hardware.keymaster@4.0-service.optee
+vendor/etc/init/android.hardware.keymaster@4.0-service.optee.rc
+vendor/lib64/libkeymaster4.so:vendor/lib64/libkeymaster4-v30.so;FIX_SONAME
+vendor/lib64/libkeymaster4support.so:vendor/lib64/libkeymaster4support-v30.so;FIX_SONAME
+vendor/lib64/libkeymaster_messages.so:vendor/lib64/libkeymaster_messages-v30.so;FIX_SONAME
+vendor/lib64/libkeymaster_portable.so:vendor/lib64/libkeymaster_portable-v30.so;FIX_SONAME
+vendor/lib64/libpuresoftkeymasterdevice.so:vendor/lib64/libpuresoftkeymasterdevice-v30.so;FIX_SONAME
+vendor/lib64/libsoft_attestation_cert.so:vendor/lib64/libsoft_attestation_cert-v30.so;FIX_SONAME
+
 # Modules
 vendor/etc/init.insmod.mt8188.cfg
 
