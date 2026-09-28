@@ -48,6 +48,16 @@ TARGET_KERNEL_CLANG_PATH := $(abspath .)/prebuilts/clang/kernel/$(HOST_PREBUILT_
 TARGET_KERNEL_CONFIG := gki_defconfig sunstone.config
 TARGET_KERNEL_SOURCE := kernel/amazon/mt8188
 
+# Kernel Modules
+BOARD_RECOVERY_KERNEL_MODULES_LOAD := $(strip $(shell cat $(DEVICE_PATH)/kernel/modules.load.recovery))
+RECOVERY_KERNEL_MODULES := \
+    $(BOARD_RECOVERY_KERNEL_MODULES_LOAD) \
+    focal_hid.ko \
+    i2c-hid-ilitek.ko \
+    i2c-hid-nt36523n.ko \
+    stylus_battery_algo.ko
+TARGET_AUTO_COLLECT_KERNEL_MODULE_DEPS := true
+
 # Partitions
 BOARD_BOOTIMAGE_PARTITION_SIZE := 33554432
 BOARD_DTBOIMG_PARTITION_SIZE := 2097152
