@@ -19,7 +19,8 @@ $(call inherit-product, frameworks/native/build/phone-xhdpi-4096-dalvik-heap.mk)
 PRODUCT_PACKAGES += \
     android.hardware.audio.effect@6.0-impl:32 \
     audio.r_submix.default:32 \
-    audio.usb.default:32
+    audio.usb.default:32 \
+    fireos.hardware.audio.service
 
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/audio/,$(TARGET_COPY_OUT_VENDOR)/etc)

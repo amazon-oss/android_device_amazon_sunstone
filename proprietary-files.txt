@@ -2,8 +2,6 @@
 
 # Audio
 system/apex/com.android.vndk.current/lib/libmedia_helper.so:vendor/lib/libmedia_helper-v30.so;FIX_SONAME
-vendor/bin/hw/fireos.hardware.audio.service
-vendor/etc/init/fireos.hardware.audio.service.rc
 vendor/lib/android.hardware.audio.common-util.so:vendor/lib/android.hardware.audio.common-util-v30.so;FIX_SONAME
 vendor/lib/android.hardware.audio.common@6.0-util.so:vendor/lib/android.hardware.audio.common@6.0-util-v30.so;FIX_SONAME
 vendor/lib/hw/audio.primary.mt8188.so
