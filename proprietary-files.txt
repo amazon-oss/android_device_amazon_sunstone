@@ -8,7 +8,6 @@ vendor/lib/hw/audio.primary.mt8188.so
 vendor/lib/hw/fireos.hardware.audio@6.0-impl.so
 vendor/lib/hw/fireos.hardware.audiosignalprocessor@1.0-impl.so
 vendor/lib/hw/fireos.hardware.audiosignalprocessor@1.1-impl.so
-vendor/lib/libamazonlog.so
 vendor/lib/libasp.so
 vendor/lib/libaudio_param_parser-vnd.so
 vendor/lib/libaudiocompensationfilter_vendor.so
@@ -290,7 +289,6 @@ vendor/lib64/libmtk_drvb.so
 # Fingerprint
 vendor/lib/optee_armtz/8aaaf200-2450-11e4-abe2-0002a5d5c51b.ta
 vendor/lib64/hw/fingerprint.goodix.so
-vendor/lib64/libamazonlog.so
 vendor/lib64/libgf_ca.so
 vendor/lib64/libgf_hal.so
 
