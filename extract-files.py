@@ -29,6 +29,8 @@ blob_fixups: blob_fixups_user_type = {
         .replace_needed('libkeymaster_portable.so', 'libkeymaster_portable-v30.so')
         .replace_needed('libpuresoftkeymasterdevice.so', 'libpuresoftkeymasterdevice-v30.so')
         .replace_needed('libsoft_attestation_cert.so', 'libsoft_attestation_cert-v30.so'),
+    'vendor/lib64/hw/hwcomposer.mt8188.so': blob_fixup()
+        .sig_replace('00 20 80 52 bc 6d 00 94 f9 03 00 aa', '00 a6 81 52'),
 }  # fmt: skip
 
 module = ExtractUtilsModule(
