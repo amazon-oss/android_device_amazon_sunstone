@@ -32,6 +32,16 @@ blob_fixups: blob_fixups_user_type = {
         .replace_needed('libsoft_attestation_cert.so', 'libsoft_attestation_cert-v30.so'),
     'vendor/lib/libMtkOmxVdecEx.so': blob_fixup()
         .add_needed('libui_shim.so'),
+    ('vendor/lib/libh264enc_sa.ca7.so', 'vendor/lib/libmp4enc_sa.ca7.so', 'vendor/lib/libthha.so',
+     'vendor/lib/libvc1dec_sa.ca7.so', 'vendor/lib/libvcodec_oal.so', 'vendor/lib/libvp8dec_sa.ca7.so',
+     'vendor/lib/libvp9dec_sa.ca7.so'): blob_fixup()
+        .clear_symbol_version('__aeabi_memclr')
+        .clear_symbol_version('__aeabi_memclr4')
+        .clear_symbol_version('__aeabi_memcpy')
+        .clear_symbol_version('__aeabi_memcpy4')
+        .clear_symbol_version('__aeabi_memmove')
+        .clear_symbol_version('__aeabi_memset')
+        .clear_symbol_version('__gnu_Unwind_Find_exidx'),
     ('vendor/lib/libnvram.so', 'vendor/lib64/libnvram.so'): blob_fixup()
         .add_needed('libbase_shim.so'),
     'vendor/lib64/hw/hwcomposer.mt8188.so': blob_fixup()
