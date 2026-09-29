@@ -129,7 +129,6 @@ soc_temp_lvts.ko
 pmic_temp.ko
 mtk-kpd.ko
 mtk-pmic-keys.ko
-hid_touch_metrics.ko
 stylus_battery_algo.ko
 i2c-hid.ko
 i2c-hid-ilitek.ko
