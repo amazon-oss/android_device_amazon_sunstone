@@ -191,6 +191,9 @@
 /dev/tee0                 0660   system     drmrpc
 /dev/teepriv0             0660   system     drmrpc
 
+# Fingerprint
+/dev/goodix_fp            0660   system     system
+
 # add for GKI, from init.rc
 /data/vendor/AFObitTrue	0771	root	system
 /data/vendor/camera_dump	0771	root	system
