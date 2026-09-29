@@ -57,6 +57,10 @@ blob_fixups: blob_fixups_user_type = {
         .replace_needed('android.hardware.audio.common@6.0-util.so', 'android.hardware.audio.common@6.0-util-v30.so')
         .replace_needed('libmedia_helper.so', 'libmedia_helper-v30.so')
         .replace_needed('libtensorflowlite_c.so', 'libtensorflowlite_c-v30.so'),
+    ('vendor/lib/hw/fireos.hardware.audio@6.0-impl.so', 'vendor/lib64/hw/android.hardware.camera.provider@2.6-impl-mediatek.so',
+     'vendor/lib64/hw/vendor.mediatek.hardware.pq@2.6-impl.so',
+     'vendor/lib64/libmtkcam_hal_android_app_cbadaptor.so'): blob_fixup()
+        .replace_needed('libutils.so', 'libutils-v32.so'),
     'vendor/lib/libMtkOmxVdecEx.so': blob_fixup()
         .add_needed('libui_shim.so'),
     ('vendor/lib/libh264enc_sa.ca7.so', 'vendor/lib/libmp4enc_sa.ca7.so', 'vendor/lib/libthha.so',
