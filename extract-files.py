@@ -83,8 +83,12 @@ blob_fixups: blob_fixups_user_type = {
      'vendor/lib64/lib3a.sensors.color.so', 'vendor/lib64/lib3a.sensors.flicker.so',
      'vendor/lib64/libSQLiteModule_VER_ALL.so', 'vendor/lib64/libaaa_toneutil.so'): blob_fixup()
         .add_needed('liblog.so'),
+    'vendor/lib64/lib3a.af.assist.utils.so': blob_fixup()
+        .sig_replace('10 00 00 b0 11 aa 41 f9 10 42 0d 91 20 02 1f d6', 'e0 03 1f 2a c0 03 5f d6'),
     ('vendor/lib64/libaalservice.so', 'vendor/lib64/libcam.utils.sensorprovider.so'): blob_fixup()
         .replace_needed('libsensorndkbridge.so', 'android.hardware.sensors@1.0-convert-shared.so'),
+    'vendor/lib64/libcamalgo.platform2.so': blob_fixup()
+        .sig_replace('10 00 00 b0 11 2e 41 f9 10 62 09 91 20 02 1f d6', 'e0 03 1f 2a c0 03 5f d6'),
     'vendor/lib64/libmtkcam_hal_android_app_cbadaptor.so': blob_fixup()
         .replace_needed('android.frameworks.displayservice@1.0.so',
                         'lineage.frameworks.displayservice@1.0.so')
@@ -94,6 +98,8 @@ blob_fixups: blob_fixups_user_type = {
         .binary_regex_replace(
             _displayservice_unresolved,
             lambda m: _displayservice_ping.ljust(len(m.group(0)), b'\x00')),
+    'vendor/lib64/libmtkcam_imgbuf_v2.so': blob_fixup()
+        .sig_replace('30 00 00 d0 11 56 43 f9 10 a2 1a 91 20 02 1f d6', 'e0 03 1f 2a c0 03 5f d6'),
 }  # fmt: skip
 
 module = ExtractUtilsModule(
