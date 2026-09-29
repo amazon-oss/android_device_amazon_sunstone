@@ -44,7 +44,9 @@ TARGET_NO_BOOTLOADER := true
 
 # Kernel
 BOARD_DTB_CFG := $(DEVICE_PATH)/kernel/dtb.cfg
+BOARD_DTBO_CFG := $(DEVICE_PATH)/kernel/dtbo.cfg
 BOARD_KERNEL_IMAGE_NAME := Image.gz
+BOARD_KERNEL_SEPARATED_DTBO := true
 TARGET_KERNEL_CLANG_VERSION := r416183b
 TARGET_KERNEL_CLANG_PATH := $(abspath .)/prebuilts/clang/kernel/$(HOST_PREBUILT_TAG)/clang-$(TARGET_KERNEL_CLANG_VERSION)
 TARGET_KERNEL_CONFIG := gki_defconfig sunstone.config
