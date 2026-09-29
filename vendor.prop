@@ -16,6 +16,7 @@ ro.vendor.mtk_pq_color_mode=1
 ro.vendor.mtk_pq_support=2
 
 # Fingerprint
+persist.vendor.fingerprint.type=side
 ro.hardware.fingerprint=goodix
 
 # Media
