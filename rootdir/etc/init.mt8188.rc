@@ -88,52 +88,6 @@ on post-fs-data
     # Sensors
     mkdir /data/vendor/sensor 0774 system system
 
-    chown system system /dev/hwmsensor
-    chown system system /dev/m_acc_misc
-    chown system system /dev/m_als_misc
-    chown system system /dev/m_ps_misc
-    chown system system /dev/sensorlist
-    chmod 0660 /dev/hwmsensor
-    chmod 0660 /dev/m_acc_misc
-    chmod 0660 /dev/m_als_misc
-    chmod 0660 /dev/m_ps_misc
-    chmod 0660 /dev/sensorlist
-
-    chown system system /sys/class/sensor/m_acc_misc/accactive
-    chown system system /sys/class/sensor/m_acc_misc/accbatch
-    chown system system /sys/class/sensor/m_acc_misc/acccali
-    chown system system /sys/class/sensor/m_acc_misc/accdelay
-    chown system system /sys/class/sensor/m_acc_misc/accenablenodata
-    chown system system /sys/class/sensor/m_acc_misc/accflush
-    chmod 0660 /sys/class/sensor/m_acc_misc/accactive
-    chmod 0660 /sys/class/sensor/m_acc_misc/accbatch
-    chmod 0660 /sys/class/sensor/m_acc_misc/acccali
-    chmod 0660 /sys/class/sensor/m_acc_misc/accdelay
-    chmod 0660 /sys/class/sensor/m_acc_misc/accenablenodata
-    chmod 0660 /sys/class/sensor/m_acc_misc/accflush
-
-    chown system system /sys/class/sensor/m_als_misc/alsactive
-    chown system system /sys/class/sensor/m_als_misc/alsbatch
-    chown system system /sys/class/sensor/m_als_misc/alscali
-    chown system system /sys/class/sensor/m_als_misc/alsdelay
-    chown system system /sys/class/sensor/m_als_misc/alsflush
-    chmod 0660 /sys/class/sensor/m_als_misc/alsactive
-    chmod 0660 /sys/class/sensor/m_als_misc/alsbatch
-    chmod 0660 /sys/class/sensor/m_als_misc/alscali
-    chmod 0660 /sys/class/sensor/m_als_misc/alsdelay
-    chmod 0660 /sys/class/sensor/m_als_misc/alsflush
-
-    chown system system /sys/class/sensor/m_ps_misc/psactive
-    chown system system /sys/class/sensor/m_ps_misc/psbatch
-    chown system system /sys/class/sensor/m_ps_misc/pscali
-    chown system system /sys/class/sensor/m_ps_misc/psdelay
-    chown system system /sys/class/sensor/m_ps_misc/psflush
-    chmod 0660 /sys/class/sensor/m_ps_misc/psactive
-    chmod 0660 /sys/class/sensor/m_ps_misc/psbatch
-    chmod 0660 /sys/class/sensor/m_ps_misc/pscali
-    chmod 0660 /sys/class/sensor/m_ps_misc/psdelay
-    chmod 0660 /sys/class/sensor/m_ps_misc/psflush
-
     # Storage
     write /sys/block/dm-0/queue/read_ahead_kb 2048
     write /sys/block/dm-1/queue/read_ahead_kb 2048
@@ -192,6 +146,41 @@ on property:sys.boot_completed=1
 
 on property:vendor.all.modules.ready=1
     # Sensors
+    chown system system /sys/class/sensor/m_acc_misc/accactive
+    chown system system /sys/class/sensor/m_acc_misc/accbatch
+    chown system system /sys/class/sensor/m_acc_misc/acccali
+    chown system system /sys/class/sensor/m_acc_misc/accdelay
+    chown system system /sys/class/sensor/m_acc_misc/accenablenodata
+    chown system system /sys/class/sensor/m_acc_misc/accflush
+    chmod 0660 /sys/class/sensor/m_acc_misc/accactive
+    chmod 0660 /sys/class/sensor/m_acc_misc/accbatch
+    chmod 0660 /sys/class/sensor/m_acc_misc/acccali
+    chmod 0660 /sys/class/sensor/m_acc_misc/accdelay
+    chmod 0660 /sys/class/sensor/m_acc_misc/accenablenodata
+    chmod 0660 /sys/class/sensor/m_acc_misc/accflush
+
+    chown system system /sys/class/sensor/m_als_misc/alsactive
+    chown system system /sys/class/sensor/m_als_misc/alsbatch
+    chown system system /sys/class/sensor/m_als_misc/alscali
+    chown system system /sys/class/sensor/m_als_misc/alsdelay
+    chown system system /sys/class/sensor/m_als_misc/alsflush
+    chmod 0660 /sys/class/sensor/m_als_misc/alsactive
+    chmod 0660 /sys/class/sensor/m_als_misc/alsbatch
+    chmod 0660 /sys/class/sensor/m_als_misc/alscali
+    chmod 0660 /sys/class/sensor/m_als_misc/alsdelay
+    chmod 0660 /sys/class/sensor/m_als_misc/alsflush
+
+    chown system system /sys/class/sensor/m_ps_misc/psactive
+    chown system system /sys/class/sensor/m_ps_misc/psbatch
+    chown system system /sys/class/sensor/m_ps_misc/pscali
+    chown system system /sys/class/sensor/m_ps_misc/psdelay
+    chown system system /sys/class/sensor/m_ps_misc/psflush
+    chmod 0660 /sys/class/sensor/m_ps_misc/psactive
+    chmod 0660 /sys/class/sensor/m_ps_misc/psbatch
+    chmod 0660 /sys/class/sensor/m_ps_misc/pscali
+    chmod 0660 /sys/class/sensor/m_ps_misc/psdelay
+    chmod 0660 /sys/class/sensor/m_ps_misc/psflush
+
     start vendor.sensors-hal-2-0
 
 service insmod_sh /vendor/bin/init.insmod.sh /vendor/etc/init.insmod.mt8188.cfg

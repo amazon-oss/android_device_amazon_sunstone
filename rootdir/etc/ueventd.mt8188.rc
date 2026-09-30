@@ -386,3 +386,10 @@
 /dev/BU64745GWZAF	0660	system	camera
 /dev/mtk_ccd	0660	system	camera
 /proc/smb/ScreenComm	0660	system	system
+
+# Sensors
+/dev/hwmsensor                                   0660    system  system
+/dev/m_acc_misc                                  0660    system  system
+/dev/m_als_misc                                  0660    system  system
+/dev/m_ps_misc                                   0660    system  system
+/dev/sensorlist                                  0660    system  system
