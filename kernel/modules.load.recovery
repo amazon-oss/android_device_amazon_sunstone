@@ -70,6 +70,14 @@ cmdq-sec-drv.ko
 mtk-cmdq-drv-ext.ko
 cmdq_helper_inf.ko
 mdp_drv_mt8188.ko
+emi-mpu.ko
+sspm.ko
+mtk_qos.ko
+mtk_gpu_hal.ko
+mtk_gpufreq.ko
+mtk_gpu_qos.ko
+ged.ko
+mali_kbase.ko
 mtk-lpm-dbg-mt8188.ko
 mtk-mmdvfs.ko
 mtk-icc-core.ko
