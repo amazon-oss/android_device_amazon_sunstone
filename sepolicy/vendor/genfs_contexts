@@ -1,0 +1,31 @@
+# Extcon
+genfscon sysfs /devices/platform/odm/odm:extcon_pogo_pin_irq/extcon                                                                 u:object_r:sysfs_extcon:s0
+genfscon sysfs /devices/platform/odm/odm:hall_sensors/extcon                                                                        u:object_r:sysfs_extcon:s0
+genfscon sysfs /devices/platform/typec_extcon/extcon                                                                                u:object_r:sysfs_extcon:s0
+
+# Input
+genfscon sysfs /devices/platform/11280000.i2c/i2c-0/0-0041/0018:222A:FFF1.0001                                                      u:object_r:sysfs_uhid:s0
+genfscon sysfs /devices/platform/11280000.i2c/i2c-0/0-0001/0018:0603:6E0C.0001                                                      u:object_r:sysfs_uhid:s0
+genfscon sysfs /devices/platform/11280000.i2c/i2c-0/0-0041/gesture_wakeup                                                           u:object_r:sysfs_tap_to_wake:s0
+genfscon sysfs /devices/platform/11280000.i2c/i2c-0/0-0001/gesture_wakeup                                                           u:object_r:sysfs_tap_to_wake:s0
+genfscon sysfs /devices/platform/11280000.i2c/i2c-0/0-0038/gesture_wakeup                                                           u:object_r:sysfs_tap_to_wake:s0
+
+# Power supply
+genfscon sysfs /devices/platform/11e00000.i2c/i2c-1/1-005b/rt9467-chg/power_supply                                                  u:object_r:sysfs_batteryinfo:s0
+
+# Proc
+genfscon proc /idme                                                                                                                 u:object_r:vendor_proc_idme:s0
+genfscon proc /sys/vm/min_free_kbytes                                                                                               u:object_r:proc_min_free_kbytes:s0
+
+# Wakeup
+genfscon sysfs /devices/platform/11280000.i2c/i2c-0/0-0041/0018:222A:FFF1.0001/power_supply/hid-0018:222A:FFF1.0001-battery/wakeup  u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/11280000.i2c/i2c-0/0-0001/0018:0603:6E0C.0001/power_supply/hid-0018:0603:6E0C.0001-battery/wakeup  u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/11012000.spi/spi_master/spi0/spi0.0/wakeup                                                         u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/11281000.i2c/i2c-2/2-004e/tcpc/type_c_port0/wakeup                                                 u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/11281000.i2c/i2c-2/2-004e/wakeup                                                                   u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/11e00000.i2c/i2c-1/1-005b/rt9467-chg/power_supply/rt9467-chg/wakeup                                u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/11e00000.i2c/i2c-1/1-005b/rt9467-chg/wakeup                                                        u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/11e00000.i2c/i2c-1/1-005b/wakeup                                                                   u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/odm/odm:extcon_pogo_pin_irq/wakeup                                                                 u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/odm/odm:hall_sensors/wakeup                                                                        u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/virtual/input/input6/wakeup                                                                                 u:object_r:sysfs_wakeup:s0

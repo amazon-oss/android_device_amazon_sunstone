@@ -1,0 +1,2 @@
+# Block devices
+type nvdata_persist_block_device, dev_type;
