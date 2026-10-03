@@ -107,6 +107,10 @@ $(call soong_config_set_bool,libion,legacy_impl,true)
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/kernel/modules.load.recovery:$(TARGET_COPY_OUT_RECOVERY)/root/lib/modules/modules.load.recovery
 
+# Keyboard
+PRODUCT_PACKAGES += \
+    AmazonKeyHandler
+
 # Lights
 PRODUCT_PACKAGES += \
     android.hardware.light-service.lineage
@@ -128,6 +132,7 @@ PRODUCT_ENFORCE_RRO_TARGETS := *
 PRODUCT_PACKAGES += \
     FrameworksResOverlaySunstone \
     Launcher3OverlaySunstone \
+    LineageSDKOverlaySunstone \
     LineageSettingsOverlaySunstone \
     LineageSettingsProviderOverlaySunstone \
     MssiFrameworkOverlay \
