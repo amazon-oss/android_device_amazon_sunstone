@@ -7,6 +7,9 @@ on early-init
     write /sys/devices/system/cpu/cpufreq/policy0/scaling_governor "performance"
     write /sys/devices/system/cpu/cpufreq/policy6/scaling_governor "performance"
 
+    # Preloader
+    write /sys/block/mmcblk0boot0/ro_lock_until_next_power_on 1
+
 on init
     # Cpusets
     write /dev/cpuset/background/cpus 0-3

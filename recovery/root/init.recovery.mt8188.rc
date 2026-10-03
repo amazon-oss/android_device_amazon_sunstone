@@ -8,6 +8,8 @@ on init
     setprop sys.usb.controller "112b1000.usb"
     setprop vendor.usb.controller "112b1000.usb"
     write /sys/module/mtk_kpd/parameters/swap_vol_key 1
+    write /sys/block/mmcblk0boot0/force_ro 1
+    write /sys/block/mmcblk0boot1/force_ro 1
 
 on post-fs
     insmod /lib/modules/stylus_battery_algo.ko
