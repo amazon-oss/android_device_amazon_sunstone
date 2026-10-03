@@ -26,6 +26,6 @@ PRODUCT_SYSTEM_PROPERTIES += \
     ro.product.manufacturer=Amzn
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    BuildDesc="sunstone-user 11 RS8319.1664N 0021508816896 amz-p,release-keys" \
-    BuildFingerprint=Amazon/sunstone/sunstone:11/RS8319.1664N/0021508816896:user/amz-p,release-keys \
+    BuildDesc="full_p11-user 11 RP1A.200720.011 60 release-keys" \
+    BuildFingerprint=Lenovo/TB-J616F/TB-J616F:11/RP1A.200720.011/TB-J616F_S000031_210723_ROW:user/release-keys \
     DeviceProduct=sunstone
