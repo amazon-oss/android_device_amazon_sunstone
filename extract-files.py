@@ -79,6 +79,8 @@ blob_fixups: blob_fixups_user_type = {
         .replace_needed('android.hardware.graphics.common-V1-ndk_platform.so', 'android.hardware.graphics.common-V7-ndk.so'),
     'vendor/lib/libwvhidl.so': blob_fixup()
         .add_needed('libcrypto_shim.so'),
+    ('vendor/lib/soundfx/libswdap.so', 'vendor/lib64/soundfx/libswdap.so'): blob_fixup()
+        .add_needed('libswdap_shim.so'),
     'vendor/lib64/hw/hwcomposer.mt8188.so': blob_fixup()
         .sig_replace('00 20 80 52 bc 6d 00 94 f9 03 00 aa', '00 a6 81 52'),
     ('vendor/lib64/lib3a.ae.pipe.so', 'vendor/lib64/lib3a.awbsync.so', 'vendor/lib64/lib3a.flash.so',

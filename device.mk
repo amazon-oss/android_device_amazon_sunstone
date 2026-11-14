@@ -70,6 +70,9 @@ PRODUCT_PACKAGES += \
 TARGET_SCREEN_HEIGHT := 2000
 TARGET_SCREEN_WIDTH := 1200
 
+# Dolby
+include hardware/amazon/AmazonDolby/dolby.mk
+
 # DRM
 PRODUCT_PACKAGES += \
     android.hardware.drm-service.clearkey
@@ -138,6 +141,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_ENFORCE_RRO_TARGETS := *
 
 PRODUCT_PACKAGES += \
+    AmazonDAPOverlaySunstone \
     FrameworksResOverlaySunstone \
     Launcher3OverlaySunstone \
     LineageSDKOverlaySunstone \
